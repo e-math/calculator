@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator - A jquery-plugin</title>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" media="all" href="style.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="css/sunny/jquery-ui-1.8.16.custom.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="mathquill/mathquill.css" />
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="calculator.js"></script>
+        <script type="text/javascript" src="mathquill/mathquill.js"></script>
+        <script type="text/javascript">
+            jQuery(function(){
+                jQuery('#box1').calculator();
+                jQuery('#calcbutton').button().click(function(){
+                    jQuery('#box2').calculator().dialog({width: 310});
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="head-content">
+                <img id="logo" src="images/emath-logo.png" alt="E-Math" />
+                <h1>Calculator</h1>
+                <h2>Handheld calculator</h2>
+            </div>
+        </header>
+        <a href="https://github.com/e-math/calculator"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+        <article class="content">
+            <h2>Example 1 (embedded)</h2>
+            <p>Here is an example, how to use <code>calculator.js</code> to create an embedded calculator.</p>
+            <div class="codewrapper">
+<div class="codeexample">
+&lt;div class="box"&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+    jQuery('#box1').calculator();
+&lt;/script&gt;
+</div>
+            </div>
+            <div id="box1"></div>
+            <h2>Example 2 (windowed)</h2>
+            <p>Another example shows, how to create a calculator inside a draggable window
+            with jQuery-ui.</p>
+            <div class="codewrapper">
+<div class="codeexample">
+&lt;div class="box"&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+    jQuery('#box2').calculator().dialog({width: 310});
+&lt;/script&gt;
+</div>
+            </div>
+            <p>Click the button to open calculator in a jQuery-ui dialog.</p>
+            <p>
+                <button id="calcbutton">Calculator</button>
+                <div id="box2"></div>
+            </p>
+        </article>
+        <footer>
+            <div id="disclaimerbox">
+                <div id="leftlogo">
+                    <img src="images/CB_logo-200.png" alt="" />
+                </div>
+                <div id="rightlogo">
+                    <img src="images/EU_with_references-300.png" alt="" />
+                </div>
+                <div id="disclaimer">
+                    The contents of the website reflect the authors' views. The Managing Authority of the Central Baltic INTERREG IVA Programme cannot be held liable for the information published by the project partners. 
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
