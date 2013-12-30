@@ -22,6 +22,7 @@ Who?
 ----
 The tool was developed in EU-funded [E-Math -project](http://emath.eu) by
 * Rolf Lindén
+
 and the copyrights are owned by [Four Ferries oy](http://fourferries.fi).
 
 License?
